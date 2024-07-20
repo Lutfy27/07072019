@@ -3,7 +3,7 @@ let nilai =0;
 let salah=0;
 const questions = [
     {
-        question: "Q1/12: Siapa aku?",
+        question: "Q1/12: Siapa namaku?",
         image: "https://media.giphy.com/media/9C1nyePnovqlpEYFMD/giphy.gif",
         answers: {
             F: {
@@ -17,7 +17,7 @@ const questions = [
         },
     },
     {
-        question: "Q2/12: TTL ku?",
+        question: "Q2/12: Tempat dan Tanggal Lahir ku?",
         image: "https://media.giphy.com/media/EZICHGrSD5QEFCxMiC/giphy.gif",
         answers: {
             T: {
@@ -31,7 +31,7 @@ const questions = [
         },
     },
     {
-        question: "Q3/12: Status ku apa saat ini?",
+        question: "Q3/12: Apa status ku saat ini?",
         image: "https://media.giphy.com/media/26xBFT1F9BgskEvTO/giphy.gif",
         answers: {
             T: {
@@ -67,7 +67,7 @@ const questions = [
         },
     },
     {
-        question: "Q5/12: kapan kita jadian?",
+        question: "Q5/12: Kapan kita jadian?",
         image: "https://media.giphy.com/media/1wmOyZYoGzz003R03Y/giphy.gif",
         answers: {
             T: {
@@ -93,7 +93,7 @@ const questions = [
         },
     },
     {
-        question: "Q6/12: Kita Jadian dimana?",
+        question: "Q6/12: Dimana Kita Jadian ?",
         image: "https://media.giphy.com/media/xd2c44rUajkHnxpywZ/giphy.gif",
         answers: {
             I: {
@@ -111,11 +111,11 @@ const questions = [
         },
     },
     {
-        question: "Q7/12: Tempat yang tidak akan kulupakan...",
+        question: "Q7/12: Dimana tempat yang tidak akan kulupakan...",
         image: "https://media.giphy.com/media/QBXtQQF2dtjEJjNbJ7/giphy.gif",
         answers: {
             T: {
-                text: "Tangga Lantai 3",
+                text: "Tangga Lantai 3 Gedkul",
                 scores: { S: +1, N: 0 }
             },
             N: {
