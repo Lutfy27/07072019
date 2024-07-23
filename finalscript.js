@@ -1,18 +1,26 @@
-// please do not use my source code without my permission, I put a lot of effort into it and please do let me know if you want to clone it, use it for your project, I begggg
+
 let nilai =0;
 let salah=0;
+let userName = 'Tak punya nama';
 const questions = [
     {
         question: "Q1/12: Siapa namaku?",
         image: "https://media.giphy.com/media/9C1nyePnovqlpEYFMD/giphy.gif",
         answers: {
-            F: {
-                text: "Lutfi Agustamel",
-                scores: { T: 0, F: +1 },
+            A: {
+                text: "Jamal",
             },
             T: {
-                text: "Upi",
-                scores: { T: +1, F: 0 },
+                text: "Lutfi",
+            },
+            B: {
+                text: "Fay",
+            },
+            C: {
+                text: "Febry",
+            },
+            D: {
+                text: "Fauzan",
             },
         },
     },
@@ -22,11 +30,9 @@ const questions = [
         answers: {
             T: {
                 text: "Pekanbaru, 27 Agustus 1999",
-                scores: { T: +1, F: 0 },
             },
             F: {
-                text: "Tidak tahu, aku gak peduli",
-                scores: { T: 0, F: 0 },
+                text: "Pekanbaru, 27 Agustus 1998",
             },
         },
     },
@@ -36,11 +42,9 @@ const questions = [
         answers: {
             T: {
                 text: "Single",
-                scores: { T: +1, F: 0 },
             },
             F: {
                 text: "Taken",
-                scores: { S: 0, N: +1 },
             },
         },
     },
@@ -48,214 +52,173 @@ const questions = [
         question: "Q4/12: Menurutmu mood ku akhir2 ini seperti apa?",
         image: "https://media.giphy.com/media/xT5LMHxhOfscxPfIfm/giphy.gif",
         answers: {
-            I: {
+            A: {
                 text: "Tidak pernah sebahagia ini semenjak diputusin",
-                scores: { T: 0, F: +1 },
             },
-            J: {
+            B: {
                 text: "Sangat Bebas tidak dispam lagi sama 'dia'",
-                scores: { T: +1, F: 0 },
             },
             F: {
                 text: "Kacau Parah, bgst tolol",
-                scores: { T: 0, F: +1 },
             },
             T: {
                 text: "Menyesal gblk, pen mati",
-                scores: { T: 0, F: +1 },
             }
         },
     },
     {
-        question: "Q5/12: Kapan kita jadian?",
+        question: "Q5/12: Tanggal Berapa aku jadian sama mantan terakhir?",
         image: "https://media.giphy.com/media/1wmOyZYoGzz003R03Y/giphy.gif",
         answers: {
             T: {
                 text: "7 Juli 2019",
-                scores: { P: +1, J: 0 },
             },
-            J: {
+            A: {
                 text: "6 Juli 2019",
-                scores: { P: 0, J: +1 },
             },
-            I: {
+            B: {
                 text: "27 Agustus 2018",
-                scores: { P: 0, J: +1 },
             },
-            F: {
+            C: {
                 text: "11 Agustus 2000",
-                scores: { P: 0, J: +1 },
             },
-            S: {
-                text: "emang pernah jadian?",
-                scores: { P: 0, J: +1 },
+            D: {
+                text: "emang pernah pacaran?",
             },
         },
     },
     {
-        question: "Q6/12: Dimana Kita Jadian ?",
+        question: "Q6/12: Tempat terfavorit ?",
         image: "https://media.giphy.com/media/xd2c44rUajkHnxpywZ/giphy.gif",
         answers: {
             I: {
-                text: "Kampus",
-                scores: { I: 0, E: +1 },
+                text: "Mall",
             },
             F: {
-                text: "Loteng gedkul",
-                scores: { I: +1, E: 0 },
+                text: "Hotel",
             },
             T: {
-                text: "Snow Highlands",
-                scores: { P: 0, J: +1 },
+                text: "Mie Gacoan",
             },
         },
     },
     {
-        question: "Q7/12: Dimana tempat yang tidak akan kulupakan...",
+        question: "Q7/12: Tempat tertolol ?",
         image: "https://media.giphy.com/media/QBXtQQF2dtjEJjNbJ7/giphy.gif",
         answers: {
             T: {
-                text: "Tangga Lantai 3 Gedkul",
-                scores: { S: +1, N: 0 }
+                text: "Tangga Lantai 3",
             },
             N: {
-                text: "Kamar",
-                scores: { S: 0, N: +1 },
+                text: "Semak-semak",
             },
             J: {
                 text: "Hotel",
-                scores: { S: 0, N: +1 },
             },
         },
     },
     {
-        question: "Q8/12: Kiss or Hug?",
+        question: "Q8/12: My Love Language?",
         image: "https://media.giphy.com/media/P3CZolxd8DeRy4g4fM/giphy.gif",
         answers: {
-            E: {
-                text: "Kiss",
-                scores: { E: +1, I: 0 },
+            A: {
+                text: "Quality Time",
             },
-            I: {
-                text: "Hug",
-                scores: { E: 0, I: +1 },
+            B: {
+                text: "Acts of Service",
             },
             T: {
-                text: "Both",
-                scores: { E: 0, I: +1 },
+                text: "Physical Touch",
+            },
+            C: {
+                text: "Physical Attack",
+            },
+            D: {
+                text: "Words of Affirmation",
+            },
+            E: {
+                text: "Giving Gifts",
             },
         },
     },
     {
-        question: "Q9/12: Aku orangnya tidak penggeli, tapi ada 1 kelemahan yg bisa bkin kegelian. dimanakah ituu?",
+        question: "Q9/12: Titik Kelemahan Aku?",
         image: "https://media.giphy.com/media/ltIFdjNAasOwVvKhvx/giphy.gif",
         answers: {
-            J: {
+            A: {
                 text: "Perut",
-                scores: { J: +1, P: 0 },
             },
             T: {
                 text: "Leher",
-                scores: { J: 0, P: +1 },
+            },
+            B: {
+                text: "Pantat",
+            },
+            C: {
+                text: "Tytyd",
             },
         },
     },
     {
-        question: "Q10/12: Aku Pernah kesal bgt sama kamu saat jalan kerumah hantu. Apakah itu?",
+        question: "Q10/12: Warna favorit Aku?",
         image: "https://media.giphy.com/media/3o9bJX4O9ShW1L32eY/giphy.gif",
         answers: {
             I: {
-                text: "KITA TELAT DATANG, wawa dkk udah pada nungguin",
-                scores: { E: 0, I: +1 },
+                text: "Hitam",
             },
             T: {
-                text: "KAMU INJAK SENDAL AKU SAMPE PUTUS!!!",
-                scores: { E: +1, I: 0 },
+                text: "Coklat",
+            },
+            F: {
+                text: "Hijau",
             },
         },
 
     },
     {
-        question: "Q11/12: Aku Suka bgt liat kamu saat...?",
+        question: "Q11/12: Tipe Cewek Aku?",
         image: "https://media.giphy.com/media/3Owa0TWYqHi5RZYGql/giphy.gif",
         answers: {
-            T: {
-                text: "kamu salting, senyum2 liat aku, glendotaann hahaha.",
-                scores: { S: +1, N: 0 },
+            A: {
+                text: "Cindo T0brut",
             },
-            N: {
-                text: "kamu cemburu, nanyain itu lagi sama siapa, detil bgt kaya intel.",
-                scores: { S: 0, N: +1 },
+            B: {
+                text: "Cindo Tomed",
+            },
+            C: {
+                text: "Cindo Tocil",
+            },
+            D: {
+                text: "Cindo Jahat",
+            },
+            E: {
+                text: "Cindo Lagi, Cindo Lagi",
+            },
+            T: {
+                text: "Yang mau samaku udah syukur, jahat soalnya.",
             },
         },
     },
     {
-        question: "Q12/12: Berapa % Aku ingin balikan?",
+        question: "Q12/12: Permainan favoritku?",
         image: "https://media.giphy.com/media/ZyNQFqZLFUhr2/giphy.gif",
         answers: {
-            F: {
-                text: "40%",
-                scores: { F: +1, T: 0 },
+            A: {
+                text: "Nyoli",
             },
             T: {
-                text: "80%",
-                scores: { F: 0, T: +1 },
+                text: "Main Cewek",
+            },
+            B: {
+                text: "Main PS",
+            },
+            C: {
+                text: "Main Anonymous",
             },
         },
     }
 ];
 
-const resultOptions = {
-    "ISTJ": {
-        image: "1DE.png",
-    },
-    "ISFJ": {
-        image: "2light.png"
-    },
-    "INFJ": {
-        image: "3UFO.png"
-    },
-    "INTJ": {
-        image: "4nebula.png"
-    },
-    "ISTP": {
-        image: "5comet.png"
-    },
-    "ISFP": {
-        image: "6ST.png"
-    },
-    "INFP": {
-        image: "7DM.png"
-    },
-    "INTP": {
-        image: "8met.png"
-    },
-    "ESTP": {
-        image: "9BH.png"
-    },
-    "ESFP": {
-        image: "10Sn.png"
-    },
-    "ENFP": {
-        image: "11Grav.png"
-    },
-    "ENTP": {
-        image: "12hand.png"
-    },
-    "ESTJ": {
-        image: "13sat.png"
-    },
-    "ESFJ": {
-        image: "14sun.png"
-    },
-    "ENFJ": {
-        image: "15gal.png"
-    },
-    "ENTJ": {
-        image: "16rocket.png"
-    },
-
-};
 
 let currentQuestion = 0;
 // let userAnswers = {};
@@ -281,6 +244,7 @@ function displayQuestion() {
 
 
 document.getElementById('start-button').addEventListener('click', function() {
+    userName = document.getElementById('user-name').value;
     document.getElementById('start-page').style.display = 'none';
     document.getElementById('quiz-page').style.display = 'block';
     currentQuestion = 0;
@@ -342,14 +306,12 @@ function showResult() {
     document.getElementById('quiz').style.display = 'none';
   
     const totalScore = nilai;
-    const personalityType = calculatePersonalityType(totalScore);
-    // const resultImage = getResultImage(personalityType);
     const calc = nilai/12*100;
     const floaters = parseInt(calc)
   
     //   <div class="card" style="background-color: #FFFFFF; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
     const resultHTML = `
-      <h2>Persentase Kamu Mengenal Aku Sebanyak: ${floaters}%</h2>
+      <h2>Persentase ${userName} Mengenal Aku Sebanyak: ${floaters}%</h2>
         <canvas id="chart" width="800" height="800"></canvas>
             <button onClick='window.location.reload()' class="start-button">Play Again?</button>
     
@@ -363,16 +325,6 @@ function showResult() {
     drawChart(chartContext, chartData);
   }
   
-  function calculatePersonalityType(totalScore) {
-    // TO DO: implement the logic to determine the personality type based on the total score
-    // For now, just return a random personality type
-    const personalityTypes = Object.keys(resultOptions);
-    return personalityTypes[Math.floor(Math.random() * personalityTypes.length)];
-  }
-  
-  function getResultImage(personalityType) {
-    return `images/${resultOptions[personalityType].image}`;
-  }
   
   function calculateChartData(totalScore) {
     const chartData = {

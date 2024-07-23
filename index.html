@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>07072019</title>
     <link rel="stylesheet" href="styles.css" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap"
@@ -19,14 +20,20 @@
         <p>
           Semua pertanyaan yang ada 'Aku' itu merujuk ke si pembuat.
           <br />
-          jadi ini ceritanya sejauh apa kamu mengenalku atau sejauh apa kamu
-          mengenal kita :v
+          jadi ini ceritanya sejauh apa kamu mengenalku :v
         </p>
         <!-- Add an input field for the user's name -->
         <!--input type="text" id="user-name" placeholder="Your Name"-->
         <img
           src="https://media.giphy.com/media/H5OcJyyzY25aqofOiS/giphy.gif"
           class="top-image"
+        />
+        <input
+          type="text"
+          id="user-name"
+          placeholder="Your Name"
+          class="form-control"
+          required
         />
         <button id="start-button" class="start-button">Play</button>
         <!--a href="gal.html" target="_blank" rel="noopener noreferrer"><button class="start-button">Learn</button></a-->
@@ -37,52 +44,25 @@
         <div id="quiz">
           <!-- Questions with images, and choice buttons will be generated here dynamically using JavaScript -->
         </div>
-        <div id="result" style="display: none">
-          <p>Feel free to share your result! #CosmosPersona</p>
-          <div class="result-image">
-            <img id="result-image" src="" alt="Result Image" />
-          </div>
-          <!--p>Feedback & Enter Raffle!<a href="https://forms.gle/1SYvtZrZYcD9VtSf6" target="_blank">here</a></p-->
-          <br />
-          <p>
-            Made by
-            <a href="https://www.instagram.com/izonfalzo" target="_blank"
-              >@izonfalzo</a
-            >
-          </p>
-          <p>
-            Special thanks to
-            <a href="https://www.instagram.com/avocadrawz" target="_blank"
-              >@avocadrawz</a
-            >
-          </p>
-          <div class="hover-container">
-            <span class="hover-text"
-              >Give feedback
-              <a href="https://forms.gle/1SYvtZrZYcD9VtSf6" target="_blank"
-                >here</a
-              ></span
-            >
-            <!--span class="tooltip">help me improve this and win prizes!</span-->
-          </div>
-          <br />
-          <a href="index.html" target="_blank" rel="noopener noreferrer"
-            ><button class="do-not-press-button">Time Machine</button></a
-          >
-          <a href="Info/" target="_blank" rel="noopener noreferrer"
-            ><button class="do-not-press-button">Explore More!</button></a
-          >
-          <a href="sub.html" target="_blank" rel="noopener noreferrer"
-            ><button class="do-not-press-button">Big Red Button</button></a
-          >
-          <div class="result-content">
-            <div class="result-text">
-              <!-- Result text and keywords will go here -->
-            </div>
-          </div>
-        </div>
+        <div id="result" style="display: none"></div>
       </div>
     </div>
+    <style>
+      #user-name {
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        padding: 8px;
+        font-size: 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #user-name:focus {
+        outline: none;
+        border-color: #333;
+        box-shadow: 0 0 2px 1px #333;
+      }
+    </style>
     <script src="finalscript.js"></script>
   </body>
 </html>
